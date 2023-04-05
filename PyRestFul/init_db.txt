@@ -1,0 +1,10 @@
+>>> from app import db
+>>> db.create_all()
+>>> from app import Customers
+>>> cust = Customers(name="ABC PVT", address="#1, ABC Road", phone_number ="0123456789", gst_number="01ABCDEF2345G6HI", pin_code="012345", state="ABC State")
+>>> db.session.add(cust)
+>>> db.session.commit()
+>>> cust = Customers(name="DEF PVT", address="#2, DEF Road", phone_number ="9876543210", gst_number="01ABCDEF2345G6HI", pin_code="678901", state="DEF State")
+>>> db.session.add(cust)
+>>> db.session.commit()
+>>>
